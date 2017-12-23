@@ -10,7 +10,7 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch("style/scss/**/*.scss", ['sass']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch(['./js/*.js', './*.html']).on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
