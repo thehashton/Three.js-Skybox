@@ -1,3 +1,6 @@
+// FPS
+(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -21,12 +24,12 @@ controls = new THREE.OrbitControls( camera, renderer.domElement);
 // Object loader
 var loader = new THREE.ObjectLoader();
 
-loader.load (
-    ' objects/mars-rover.json ',
-    function( object ) {
-        scene.add( object );
-    }
-);
+// loader.load (
+//     ' objects/mars-rover.json ',
+//     function( object ) {
+//         scene.add( object );
+//     }
+// );
 
 // creates the shape
 var geometry = new THREE.BoxGeometry( 2, 2, 2 );
