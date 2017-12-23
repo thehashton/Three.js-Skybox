@@ -16,6 +16,7 @@ window.addEventListener( 'resize', function() {
 
 // controls
 controls = new THREE.OrbitControls( camera, renderer.domElement);
+//controls = new THREE.FlyControls(camera, renderer.domElement);
 
 // Object loader
 var loader = new THREE.ObjectLoader();
