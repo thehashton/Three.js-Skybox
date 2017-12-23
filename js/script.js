@@ -8,6 +8,15 @@ var renderer = new THREE.WebGLRenderer( );
 //create the shape
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 
+// update viewport on resize
+window.addEventListener( 'resize', function() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    renderer.setSize( width, height );
+    camera.aspect = width / height; //aspect ratio
+    camera.updateProjectionMatrix();
+});
+
 
 // create a material, colour or image texture
 // var material = new THREE.MeshBasicMaterial( { color: 0xFFFFFF, wireframe: false} );
