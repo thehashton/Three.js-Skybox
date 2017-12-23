@@ -5,6 +5,16 @@ var renderer = new THREE.WebGLRenderer( );
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
+// window resize
+window.addEventListener( 'resize', function() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    renderer.setSize( width, height );
+    camera.aspect = width / height; //aspect ratio
+    camera.updateProjectionMatrix();
+});
+
+
 //create the shape
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 
