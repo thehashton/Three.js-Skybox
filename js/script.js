@@ -17,6 +17,15 @@ window.addEventListener( 'resize', function() {
 // controls
 controls = new THREE.OrbitControls( camera, renderer.domElement);
 
+// Object loader
+var loader = new THREE.ObjectLoader();
+
+loader.load (
+    ' objects/mars-rover.json ',
+    function( object ) {
+        scene.add( object );
+    }
+);
 
 // creates the shape
 var geometry = new THREE.BoxGeometry( 2, 2, 2 );
