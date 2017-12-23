@@ -29,7 +29,7 @@ var sphere = new THREE.Mesh( geometry, material );
 scene.add( sphere );
 
 // Camera Position
-camera.position.z = 3;
+camera.position.z = 5;
 
 //game logic
 var update = function ( ) {
