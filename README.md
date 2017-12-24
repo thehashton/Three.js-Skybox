@@ -7,6 +7,9 @@ A 3D WebGL project using the Three.js javascript framework to create a 3D scene 
     3. Gulp-sass
     4. Three.js
     
+####Demo
+https://hghazni.github.io/Three.js-Skybox/
+    
 #### What have I learnt?
 I've learnt a lot about several different fundamentals within Three.js to do with:- 
 
